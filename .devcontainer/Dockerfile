@@ -71,9 +71,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # 安装 python 依赖
 RUN pip install --no-cache-dir -i https://pypi.tuna.tsinghua.edu.cn/simple \
     numpy \
-    pyaudio \
-    algorithm \
-    motion \
     scipy 
 
 # ==============================================================================
