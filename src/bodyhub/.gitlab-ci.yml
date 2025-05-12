@@ -1,0 +1,11 @@
+stages:
+  - build
+  - release
+
+publish:
+  stage: build
+  script:
+    - echo "ci test !!"
+    - ./notify.ps1 $CI_PROJECT_NAME	$CI_COMMIT_SHA
+  only: 
+    - master

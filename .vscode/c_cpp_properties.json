@@ -1,0 +1,33 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/workspace/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/workspace/src/bodyhub/include/**",
+        "/workspace/src/DynamixelSDK/ros/include/**",
+        "/workspace/src/dynamixel-workbench/dynamixel_workbench_controllers/include/**",
+        "/workspace/src/dynamixel-workbench/dynamixel_workbench_operators/include/**",
+        "/workspace/src/dynamixel-workbench/dynamixel_workbench_single_manager/include/**",
+        "/workspace/src/dynamixel-workbench/dynamixel_workbench_single_manager_gui/include/**",
+        "/workspace/src/dynamixel-workbench/dynamixel_workbench_toolbox/include/**",
+        "/workspace/src/nav_dev/src/humanoid_navigation/footstep_planner/include/**",
+        "/workspace/src/nav_dev/src/humanoid_navigation/gridmap_2d/include/**",
+        "/workspace/src/nav_dev/src/humanoid_navigation/humanoid_localization/include/**",
+        "/workspace/src/nav_dev/src/humanoid_navigation/humanoid_planner_2d/include/**",
+        "/workspace/src/ikmodule/walkEngien/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

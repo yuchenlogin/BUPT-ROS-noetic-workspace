@@ -1,0 +1,44 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+	"service": "ros1-noetic",
+	"initializeCommand": "bash .devcontainer/setup_container.sh",
+	"dockerComposeFile": [
+		"docker-compose.yaml",
+	],
+	
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
+	"remoteUser": "ros",
+	"runArgs": [
+    "--cap-add=sys_nice",
+    "--security-opt=seccomp=unconfined",
+	"--privileged",
+    "--ulimit", "rtprio=99",
+    "--ulimit", "nproc=65535:65535",
+    "--ulimit", "nofile=65535:65535",
+	"--device=/dev/snd", 
+    "--group-add=audio"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"althack.ament-task-provider",
+				"betwo.b2-catkin-tools",
+				"DotJoshJohnson.xml",
+				"ms-azuretools.vscode-docker",
+				"ms-iot.vscode-ros",
+				"ms-python.python",
+				"ms-vscode.cpptools",
+				"redhat.vscode-yaml",
+				"smilerobotics.urdf",
+				"twxs.cmake",
+				"yzhang.markdown-all-in-one",
+				"GitHub.copilot",
+				"donjayamanne.githistory",
+				"CodeInChinese.EnglishChineseDictionary",
+				"ms-python.black-formatter",
+				"llvm-vs-code-extensions.vscode-clangd"
+			]
+		}
+	}
+}
