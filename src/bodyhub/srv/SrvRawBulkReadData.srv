@@ -1,0 +1,6 @@
+uint8[] idArray
+uint8 number
+uint16[] addr
+uint16[] length
+---
+int32[] rawData

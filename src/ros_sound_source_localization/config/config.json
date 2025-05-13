@@ -1,0 +1,21 @@
+{
+    "facedetectionarea": {
+        "left_rage": 200,
+        "right_rage": 440
+    },
+    "detect_face_timeouts": 20,
+    "head_pitch": -20,
+    "target_distance": 1000,
+    "action_file": "/home/lemon/robot_ros_application/catkin_ws/src/ros_sound_source_localization/actions/wave.py",
+    "obstacle_detection_roi": {
+        "top": 180,
+        "bottom": 480,
+        "left": 0,
+        "right": 640
+    },
+    "audio": {
+        "声源定位已开启": "/home/lemon/robot_ros_application/catkin_ws/src/ros_sound_source_localization/voice/demo_start.mp3",
+        "未检测到人脸": "/home/lemon/robot_ros_application/catkin_ws/src/ros_sound_source_localization/voice/face_not_found.mp3",
+        "我在": "/home/lemon/robot_ros_application/catkin_ws/src/ros_sound_source_localization/voice/im_here.mp3"
+    }
+}

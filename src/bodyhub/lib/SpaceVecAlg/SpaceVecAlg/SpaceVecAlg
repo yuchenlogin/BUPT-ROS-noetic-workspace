@@ -1,0 +1,45 @@
+/*
+ * Copyright 2012-2020 CNRS-UM LIRMM, CNRS-AIST JRL
+ */
+
+#pragma once
+
+// std
+#include <limits>
+#include <ostream>
+
+// eigen
+#include <Eigen/Core>
+#include <Eigen/Geometry>
+
+// utility
+#include "EigenTypedef.h"
+#include "EigenUtility.h"
+#include "MathFunc.h"
+
+// forward declaration
+#include "fwd.h"
+
+// types
+#include "ABInertia.h"
+#include "AdmittanceVec.h"
+#include "ForceVec.h"
+#include "ImpedanceVec.h"
+#include "MotionVec.h"
+#include "PTransform.h"
+#include "RBInertia.h"
+
+// operators
+#include "Operators.h"
+
+// typedef
+namespace sva
+{
+typedef MotionVec<double> MotionVecd;
+typedef ForceVec<double> ForceVecd;
+typedef ImpedanceVec<double> ImpedanceVecd;
+typedef AdmittanceVec<double> AdmittanceVecd;
+typedef RBInertia<double> RBInertiad;
+typedef ABInertia<double> ABInertiad;
+typedef PTransform<double> PTransformd;
+} // namespace sva

@@ -1,0 +1,57 @@
+{
+    "举手": {
+        "key_words": [
+            "举手"
+        ],
+        "reply": [
+            "好的举手",
+            "好的，开始举手"
+        ],
+        "cmd_type": "run_node",
+        "path": "/home/lemon/robot_ros_application/catkin_ws/src/ros_actions_node/scripts/举手.py"
+    }, 
+    "伸展手臂": {
+        "key_words": [
+            "伸展手臂"
+        ],
+        "reply": [
+            "好的",
+            "好的，开始伸展手臂"
+        ],
+        "cmd_type": "run_node",
+        "path": "/home/lemon/robot_ros_application/catkin_ws/src/ros_actions_node/scripts/伸展手臂.py"
+    }, 
+    "点头": {
+        "key_words": [
+            "点头"
+        ],
+        "reply": [
+            "好的",
+            "好的，开始点头"
+        ],
+        "cmd_type": "run_node",
+        "path": "/home/lemon/robot_ros_application/catkin_ws/src/ros_actions_node/scripts/点头.py"
+    }, 
+    "停止运行": {
+        "key_words": [
+            "停止运行",
+            "停下来"
+        ],
+        "reply": [
+            "好的",
+            "好嘞!"
+        ],
+        "cmd_type": "stop_node"
+    },
+    "wakeup": {
+        "key_words": [
+            "wakeup"
+        ],
+        "reply": [
+            "在呢",
+            "Hi",
+            "我在！"
+        ],
+        "cmd_type": "wakeup"
+    }
+}

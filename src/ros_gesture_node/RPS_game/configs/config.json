@@ -1,0 +1,38 @@
+{
+    "label": [
+        "paper",
+        "rock",
+        "scissors"
+    ],
+    "model_parameters": {
+        "mean": [0.485, 0.456, 0.406],
+        "std": [0.229, 0.224, 0.225],
+        "input_resize": {
+            "width": 224,
+            "height": 224
+        }
+    },
+    "tts_params": {
+        "vcn": "qige",
+        "speed": 50,
+        "pitch": 30,
+        "volume": 20
+    },
+    "tts_text": {
+        "demo_start": "我已经准备好，你可以喊“开始”我们开始一次游戏",
+        "demo_end": "欢迎下次再和我玩",
+        "round_start_command": "开始",
+        "round_end_command": "结束"
+    },
+    "rps": {
+        "rock": "/home/lemon/robot_ros_application/catkin_ws/src/ros_gesture_node/RPS_game/actions/rock.py",
+        "paper": "/home/lemon/robot_ros_application/catkin_ws/src/ros_gesture_node/RPS_game/actions/paper.py",
+        "scissors": "/home/lemon/robot_ros_application/catkin_ws/src/ros_gesture_node/RPS_game/actions/scissors.py"
+    },
+    "rps_sounds": {
+        "win": "我赢了",
+        "lose": "Roban 输了，你好厉害",
+        "tie": "我们平局",
+        "unrecognized": "抱歉 Roban 没认出你的手势，重新来一次好吗"
+    }
+}

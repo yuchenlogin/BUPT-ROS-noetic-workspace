@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="leju_test_nodes" type="record_head_servo_motion_track.py" name="record_head_track_node" output="screen" />
+</launch>

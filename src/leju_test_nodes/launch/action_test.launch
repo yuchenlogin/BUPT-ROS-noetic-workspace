@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="leju_test_nodes" type="action_test.py" name="ActionTest" output="screen" />
+    <include file="$(find ros_work_weixin_robot_node)/launch/run_work_weixin_robot.launch" />
+</launch>

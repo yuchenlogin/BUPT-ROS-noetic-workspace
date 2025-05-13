@@ -1,0 +1,5 @@
+string image_path
+float32 draw_threshold
+---
+string result
+float32 confidence

@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="ros_sound_source_localization" type="node.py" name="ros_sound_source_localization" output="screen" required="true"/>
+
+    <node pkg="jy901_module" type="jy901_module_node" name="jy901Module_node" output="screen" required="true"/>
+</launch>

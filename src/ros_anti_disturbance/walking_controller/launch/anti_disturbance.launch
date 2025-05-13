@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="walking_controller" type="walking_controller_node" name="anti_disturbance_node" output="screen" />
+    <node pkg="jy901_module" type="jy901_module_node" name="jy901Module_node" output="screen" />
+</launch>

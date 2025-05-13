@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find ar_track_alvar)/launch/roban_chin_camera.launch">
+    </include>
+
+    <arg name="input_args" default=""/>
+    <node name="artag_tracking_reciprocating" pkg="ros_actions_node" type="artag_tracking_reciprocating.py" args="$(arg input_args)" output="screen"/>
+</launch>

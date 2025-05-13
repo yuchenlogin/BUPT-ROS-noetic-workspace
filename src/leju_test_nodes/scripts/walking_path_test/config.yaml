@@ -1,0 +1,20 @@
+MAP_POINTS: # 地图点的位置
+  '0': [0, 0]
+  '1': [30, 0]
+  '2': [60, 0]
+  '3': [90, 0]
+  '4': [-30, 0]
+  '5': [-60, 0]
+  '6': [-90, 0]
+  '7': [0, -30]
+  '8': [0, 30]
+  '9': [60, -30]
+  '10': [-60, -30]
+Map_xml_path: /home/lemon/robot_ros_application/catkin_ws/src/leju_test_nodes/scripts/walking_path_test/launch/MultiMarkerMap.xml
+Marker_size: 5 # ARtag码的大小
+POINTS_END: [-0.017795093528722744, 0.039001218919713435, 0.3045451417758911] # 结束位置
+POINTS_START: [-0.01597494097894281, 0.027607822616357428, 0.6226594978440739] # 测试开始位置
+FAILURE_DISTANCE: 0.6
+"WX_BOT_KEY" : "" # 企业微信机器人的key
+"WX_NOTICE_LIST" : [""] # 要@的人的手机号
+"temperature_protection_value": 65 # 舵机温度保护值,高于该值退出测试

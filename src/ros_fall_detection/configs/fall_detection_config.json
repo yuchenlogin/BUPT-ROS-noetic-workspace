@@ -1,0 +1,16 @@
+{
+    "check": {
+        "text": "摔倒检测已开启,让我看看有没有人摔倒。",
+        "vcn": "qige",
+        "speed": 50,
+        "pitch": 5,
+        "volume": 20
+    },
+    "fall": {
+        "text": "检测到有人摔倒,这里需要帮助",
+        "vcn": "qige",
+        "speed": 50,
+        "pitch": 5,
+        "volume": 20
+    }
+}

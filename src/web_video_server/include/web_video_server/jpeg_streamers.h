@@ -1,0 +1,59 @@
+#ifndef JPEG_STREAMERS_H_
+#define JPEG_STREAMERS_H_
+
+#include <image_transport/image_transport.h>
+#include "web_video_server/image_streamer.h"
+#include "async_web_server_cpp/http_request.hpp"
+#include "async_web_server_cpp/http_connection.hpp"
+#include "web_video_server/multipart_stream.h"
+#include "opencv2/imgcodecs/legacy/constants_c.h"
+#include <opencv2/imgproc/imgproc_c.h>
+#include<opencv2/imgproc/types_c.h>
+#include<opencv2/opencv.hpp>
+#include <opencv2/highgui/highgui_c.h>
+#include <opencv2/calib3d/calib3d_c.h>
+#include"opencv2/imgcodecs/legacy/constants_c.h"
+
+
+namespace web_video_server
+{
+
+class MjpegStreamer : public ImageTransportImageStreamer
+{
+public:
+  MjpegStreamer(const async_web_server_cpp::HttpRequest &request, async_web_server_cpp::HttpConnectionPtr connection,
+                ros::NodeHandle& nh);
+  ~MjpegStreamer();
+protected:
+  virtual void sendImage(const cv::Mat &, const ros::Time &time);
+
+private:
+  MultipartStream stream_;
+  int quality_;
+};
+
+class MjpegStreamerType : public ImageStreamerType
+{
+public:
+  boost::shared_ptr<ImageStreamer> create_streamer(const async_web_server_cpp::HttpRequest &request,
+                                                   async_web_server_cpp::HttpConnectionPtr connection,
+                                                   ros::NodeHandle& nh);
+  std::string create_viewer(const async_web_server_cpp::HttpRequest &request);
+};
+
+class JpegSnapshotStreamer : public ImageTransportImageStreamer
+{
+public:
+  JpegSnapshotStreamer(const async_web_server_cpp::HttpRequest &request,
+                       async_web_server_cpp::HttpConnectionPtr connection, ros::NodeHandle& nh);
+  ~JpegSnapshotStreamer();
+protected:
+  virtual void sendImage(const cv::Mat &, const ros::Time &time);
+
+private:
+  int quality_;
+};
+
+}
+
+#endif

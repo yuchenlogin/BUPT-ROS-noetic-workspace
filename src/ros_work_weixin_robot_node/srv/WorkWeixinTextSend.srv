@@ -1,0 +1,7 @@
+string robotKey
+string text
+uint64[] phones
+---
+bool sendRes
+int32 errcode
+string resultMsg

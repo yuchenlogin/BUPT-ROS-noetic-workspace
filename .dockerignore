@@ -1,0 +1,9 @@
+.vscode/
+.git/
+build/
+install/
+log/
+site/
+MvSdkLog/
+data/
+assets/

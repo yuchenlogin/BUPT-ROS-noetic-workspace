@@ -1,0 +1,4 @@
+string topic_name
+---
+bool is_successful
+string result_msg

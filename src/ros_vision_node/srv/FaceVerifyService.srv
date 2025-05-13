@@ -1,0 +1,5 @@
+float32[] faceId1
+float32[] faceId2
+---
+int16 result
+float32 confidence

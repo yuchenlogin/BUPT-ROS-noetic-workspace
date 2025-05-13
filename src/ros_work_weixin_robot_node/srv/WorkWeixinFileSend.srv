@@ -1,0 +1,6 @@
+string robotKey
+string filePath
+---
+bool sendRes
+int32 errcode
+string resultMsg

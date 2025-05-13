@@ -1,0 +1,129 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "msbuild",
+            "args": [
+                // Ask msbuild to generate full paths for file names.
+                "/property:GenerateFullPaths=true",
+                "/t:build",
+                // Do not generate summary otherwise it leads to duplicate errors in Problems panel
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        },
+        // ROS node related tasks
+        {
+            "label": "Launch roscore",
+            "detail": "First step of all",
+            "type": "shell",
+            "command": "roscore",
+            "problemMatcher": []
+        },
+        {
+            "label": "Launch Coppeliasim task10",
+            "detail": "Launch Coppeliasim and open task10_upstair.ttt",
+            "type": "shell",
+            "command": "cd /workspace/CoppeliaSim_Edu/ && ./coppeliaSim.sh /workspace/scrips/normal_sim_game/ai_innovative_roban_sim/vrep/ai_innovative_roban_sim_task10_upstair.ttt",
+            "problemMatcher": []
+        },
+        {
+            "label": "Launch Coppeliasim Own",
+            "detail": "Launch Coppeliasim and open new.ttt",
+            "type": "shell",
+            "command": "cd /workspace/CoppeliaSim_Edu/ && ./coppeliaSim.sh /workspace/src/Exp1/new.ttt",
+            "problemMatcher": []
+        },
+        {
+            "label": "Launch bodyhub (sim=true)",
+            "detail": "Launch bodyhub after build",
+            "type": "shell",
+            "command": "roslaunch bodyhub bodyhub.launch sim:=true",
+            "problemMatcher": []
+        },
+        {
+            "label": "Launch ik module",
+            "detail": "Launch ik_module after build & roscore",
+            "type": "shell",
+            "command": "rosrun ik_module ik_module_node",
+            "problemMatcher": []
+        },
+        {
+            "label": "Launch sound play mode",
+            "detail": "Launch source play mode after build & roscore",
+            "type": "shell",
+            "command": "rosrun sound_play soundplay_node.py",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run sim_image_convert_slam_form",
+            "detail": "Convert images to slam form",
+            "type": "shell",
+            "command": "python3 ./scrips/normal_sim_game/ai_innovative_roban_sim/scripts/sim_image_convert_slam_form.py",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run sim_pr_convert_pose",
+            "detail": "convert pose to slam form",
+            "type": "shell",
+            "command": "python3 ./scrips/normal_sim_game/ai_innovative_roban_sim/scripts/sim_pr_convert_pose.py",
+            "problemMatcher": []
+        },
+        // Only build one pkg
+        {
+            "label": "Build ros-actions-node only",
+            "detail": "Build only(Example)",
+            "type": "shell",
+            "command": "catkin_make",
+            "args": [
+                "-DCATKIN_WHITELIST_PACKAGES=ros_actions_node"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Launch sim_octomap.launch",
+            "detail": "Launch sim_octomap.launch",
+            "type": "shell",
+            "command": "roslaunch ./scrips/normal_sim_game/ai_innovative_roban_sim/scripts/sim_octomap.launch",
+            "problemMatcher": []
+        },
+        {
+            "label": "Launch humannoid_planner",
+            "detail": "Launch humannoid_planner_2d.launch",
+            "type": "shell",
+            "command": "roslaunch humanoid_planner_2d humanoid_planner_2d.launch",
+            "problemMatcher": []
+        },
+        {
+            "label": "Launch path trace",
+            "detail": "Launch task_path_tracing (after launching humanniod planner)",
+            "type": "shell",
+            "command": "python3 ./scrips/caai_roban_challenge/higher_vocational_schools/scripts/Task_path_tracking.py",
+            "problemMatcher": []
+        },
+        {
+            "label": "Launch key ctrl",
+            "detail": "Launch keyboard control (after launching path trace)",
+            "type": "shell",
+            "command": "python3 ./scrips/caai_roban_challenge/path_track/key_ctrl.py",
+            "problemMatcher": []
+        },
+        {
+            "label": "Launch task museum",
+            "detail": "Launch task in musem(in new.ttt)",
+            "type": "shell",
+            "command": "python3 ./src/Exp1/task_museum.py",
+            "problemMatcher": []
+        }
+    ]
+}

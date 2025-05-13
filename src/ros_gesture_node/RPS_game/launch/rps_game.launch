@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="ros_gesture_node" type="rps_node.py" name="rps_node" output="screen" required="true"/>
+
+    <node pkg="ros_gesture_node" type="rps_game.py" name="rps_game_node" output="screen" required="true"/>
+</launch>

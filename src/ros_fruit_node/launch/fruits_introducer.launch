@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="ros_fruit_node" type="fruit_node.py" name="fruit_recognizer_node" output="screen" required="true"/>
+
+    <node pkg="ros_fruit_node" type="fruit_introducer.py" name="fruit_introducer" output="screen" required="true"/>
+</launch>

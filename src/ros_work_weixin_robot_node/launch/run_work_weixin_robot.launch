@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="ros_work_weixin_robot_node" type="main.py" name="ros_work_weixin_robot_node" output="screen" />
+</launch>

@@ -1,0 +1,42 @@
+{
+    "tag_num": 0,
+
+    "target_pos": {
+        "z": 0.130,
+        "x": 0.220,
+        "pitch": 0.0
+    },
+
+    "threshold": {
+        "z": 0.05,
+        "x": 0.05,
+        "pitch": 5.0
+    },
+
+    "pid_gain": {
+        "z_p": 0.7,
+        "x_p": 0.6,
+        "pitch_p": 0.5
+    },
+
+    "elements_and_results_of_matching": {
+        "三星堆": {
+            "model_image_path": [
+                "/home/lemon/robot_ros_application/catkin_ws/src/ros_museum_docent/scripts/model_image/Sanxingdui.jpg",
+                "/home/lemon/robot_ros_application/catkin_ws/src/ros_museum_docent/scripts/model_image/Sanxingdui_left.jpg",
+                "/home/lemon/robot_ros_application/catkin_ws/src/ros_museum_docent/scripts/model_image/Sanxingdui_right.jpg"
+            ],
+            "action_and_move_to_list": [
+                "/home/lemon/robot_ros_application/catkin_ws/src/ros_actions_node/scripts/鞠躬.py",
+                [-0.4, 0.0, 0.0],
+                [0.0, 0.0, 180],
+                "/home/lemon/robot_ros_application/catkin_ws/src/ros_actions_node/scripts/鞠躬.py",
+                [0.0, 0.2, 0.0]
+            ],
+            "museum_introduce_text": [
+                "大家好，现在由我来给大家介绍这件文物",
+                "此文物为商代的青铜器，立人像采用分段浇铸法嵌铸而成，身体中空，分人像与底座两部分。人像浓眉直目，高鼻阔嘴。头戴花状高冠，身着三层窄袖半臂式右衽上衣。脚戴足镯，赤足站立于方形怪兽座上。现收藏于三星堆博物馆。"
+            ]
+        }
+    }
+}

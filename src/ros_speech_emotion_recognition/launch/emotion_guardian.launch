@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="ros_speech_emotion_recognition" type="emotion_recognition_node.py" name="ros_emotion_recognition_node" output="screen" required="true"/>
+
+    <node pkg="ros_speech_emotion_recognition" type="emotion_guardian_node.py" name="ros_emotion_guardian_node" output="screen" required="true"/>
+</launch>

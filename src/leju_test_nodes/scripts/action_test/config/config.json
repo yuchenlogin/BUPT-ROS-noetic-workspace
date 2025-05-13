@@ -1,0 +1,33 @@
+{
+    "robotKey": "none",
+    "phone": [],
+    "action_list": [
+        "下蹲",
+        "举手",
+        "跳舞",
+        "太极"
+    ],
+    "下蹲": {
+        "action_file": "/home/lemon/robot_ros_application/catkin_ws/src/ros_actions_node/scripts/下蹲.py",
+        "times": 3,
+        "second_of_break_time": 3
+    },
+    "举手": {
+        "action_file": "/home/lemon/robot_ros_application/catkin_ws/src/ros_actions_node/scripts/举手.py",
+        "times": 3,
+        "second_of_break_time": 3
+    },
+    "跳舞": {
+        "action_file": "/home/lemon/robot_ros_application/catkin_ws/src/ros_actions_node/scripts/Say-yeah舞蹈案例.py",
+        "times": 1,
+        "second_of_break_time": 3
+    },
+    "太极": {
+        "action_file": "/home/lemon/robot_ros_application/catkin_ws/src/ros_actions_node/scripts/武当太极.py",
+        "times": 1,
+        "second_of_break_time": 3
+    },
+    "interval_time_per_round": 5,
+    "servo_id_with_normal_communication": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+    "temperature_protection_value": 65
+}

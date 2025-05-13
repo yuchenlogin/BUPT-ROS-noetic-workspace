@@ -1,0 +1,31 @@
+{
+    "tts_params": {
+        "vcn": "qige",
+        "speed": 50,
+        "pitch": 30,
+        "volume": 20
+    },
+    "tts_text": {
+        "demo_start": "情绪识别已开启，我会根据语音识别出情绪，请保证我可以听到你的声音"
+    },
+    "emotion_reply": {
+        "neutral": [
+            "/home/lemon/robot_ros_application/catkin_ws/src/ros_speech_emotion_recognition/actions/neutral.py"
+        ],
+        "happy": [
+            "/home/lemon/robot_ros_application/catkin_ws/src/ros_speech_emotion_recognition/actions/happy.py"
+        ],
+        "fear": [
+            "/home/lemon/robot_ros_application/catkin_ws/src/ros_speech_emotion_recognition/actions/fear.py"
+        ],
+        "angry": [
+            "/home/lemon/robot_ros_application/catkin_ws/src/ros_speech_emotion_recognition/actions/angry.py"
+        ],
+        "sad": [
+            "/home/lemon/robot_ros_application/catkin_ws/src/ros_speech_emotion_recognition/actions/sad.py"
+        ],
+        "surprise": [
+            "/home/lemon/robot_ros_application/catkin_ws/src/ros_speech_emotion_recognition/actions/surprise.py"
+        ]
+    }
+}

@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="ros_fall_detection" type="fall_node.py" name="fall_camera_node" output="screen" required="true"/>
+
+    <node pkg="ros_fall_detection" type="fall_detection.py" name="fall_detection_node" output="screen" required="true"/>
+</launch>

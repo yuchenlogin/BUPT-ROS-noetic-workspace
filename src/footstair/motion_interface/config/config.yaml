@@ -1,0 +1,4 @@
+port:
+  name: /dev/usb_servo
+  baudrate: 1000000
+offset_path: 1 # 0: ./offset.yaml 1: /home/lemon/.lejuconfig/offset.yaml

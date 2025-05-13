@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  ros1-noetic:
+    image: ros-noetic-image
+    container_name: bupt-ros-noetic-container
+    entrypoint: ["/bin/bash"]
+    tty: true
+    network_mode: host
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - WORKSPACE=/workspace
+        - USERNAME=ros
+        - USER_UID=${UID}
+        - USER_GID=${GID}
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+      - apparmor:unconfined
+    ipc: host
+    privileged: true
+    volumes:
+      - ..:/workspace:cached
+      - /dev/bus/usb:/dev/bus/usb
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
+      - ${HOME}/.ssh/:/home/${USER:-ros-user}/.ssh/:ro
+    devices:
+      - /dev/snd:/dev/snd
+    environment:
+      DISPLAY: "${DISPLAY}"
+      WAYLAND_DISPLAY: "${WAYLAND_DISPLAY}"
+      XDG_RUNTIME_DIR: "${XDG_RUNTIME_DIR}"
+      PULSE_SERVER: "${PULSE_SERVER}"
+      LIBGL_ALWAYS_SOFTWARE: "1"
+      HOSTNAME: "${HOSTNAME}"
+      PS1: "\\u@\\h:\\w\\$ "
+
+    hostname: ${HOSTNAME}
+    user: ${UID:-1000}:${GID:-1000}
